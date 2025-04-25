@@ -20,7 +20,7 @@ const limiter = rateLimit({
 });
 
 const corsOptions = {
-    origin:["http://localhost:3000", "http://localhost:5173"],
+    origin:["http://localhost:3000", "http://localhost:5173", "https://testtuteur2-git-main-imade17ma-gmailcoms-projects.vercel.app"],
     credentials: true
 }
 
