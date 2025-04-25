@@ -22,15 +22,15 @@ jobs:
           # Build API image
           docker build \
             -t imadch/testtuteur1:api-latest \
-            -f ./api/Dockerfile \
-            ./api
+            -f ./backend/Dockerfile \
+            ./backend
 
           # (Optionnel) Tag avec commit SHA pour versionner
-          docker tag imadch/testtuteur1:api-latest imadch/testtuteur1:api-${{ github.sha }}
+          docker tag imadch/testtuteur1:backend-latest imadch/testtuteur1:backend-${{ github.sha }}
 
           # Push de l'image "latest" et de la version "sha"
-          docker push imadch/testtuteur1:api-latest
-          docker push imadch/testtuteur1:api-${{ github.sha }}
+          docker push imadch/testtuteur1:backend-latest
+          docker push imadch/testtuteur1:backend-${{ github.sha }}
 
   deploy-to-railway:
     runs-on: ubuntu-latest
