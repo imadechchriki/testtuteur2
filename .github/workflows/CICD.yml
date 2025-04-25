@@ -21,7 +21,7 @@ jobs:
         run: |
           # Build API image
           docker build \
-            -t imadch/testtuteur1:api-latest \
+            -t imadch/testtuteur1:backend-latest \
             -f ./backend/Dockerfile \
             ./backend
 
